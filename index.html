@@ -43,18 +43,28 @@ h2 {
   border-radius:10px;
 }
 
+.btn {
+  display:inline-block;
+  padding:12px 25px;
+  background:green;
+  color:white;
+  text-decoration:none;
+  border-radius:5px;
+  margin-top:10px;
+}
+
 footer {
-  background: #111;
-  color: white;
-  text-align: center;
-  padding: 20px;
+  background:#111;
+  color:white;
+  text-align:center;
+  padding:20px;
 }
 </style>
 </head>
 
 <body>
 
-<!-- LANGUAGE TRANSLATOR -->
+<!-- TRANSLATOR -->
 <div id="google_translate_element" style="text-align:center;margin-top:10px;"></div>
 
 <script>
@@ -75,42 +85,36 @@ function googleTranslateElementInit() {
 <!-- PASTOR -->
 <section style="text-align:center;">
 <h2>Meet the Pastor</h2>
+<img src="pastor.jpg" style="width:220px;border-radius:12px;box-shadow:0 4px 15px rgba(0,0,0,0.3);">
 
-<img src="pastor.jpg" style="
-width:220px;
-border-radius:12px;
-box-shadow:0 4px 15px rgba(0,0,0,0.3);
-margin-bottom:20px;
-">
-
-<p style="max-width:700px;margin:auto;line-height:1.6;">
-Pastor Dr. E.A Abioye is a divinely ordained servant of God, carrying a strong apostolic and prophetic mantle. 
-He is a vessel of power, revelation, and transformation, sent to raise men of fire and dominion. 
-His ministry is marked by undeniable testimonies, deliverance, and the manifestation of God’s glory.
+<p style="max-width:700px;margin:auto;">
+Pastor Dr. E.A Abioye is a prophetic voice raised for this generation, carrying divine authority, revelation, and power. His ministry brings transformation, healing, and supernatural encounters that shift destinies.
 </p>
 
-<br>
-
-<a href="https://wa.me/2347031183005" target="_blank"
-style="background:green;color:white;padding:12px 25px;border-radius:5px;text-decoration:none;">
-Chat Pastor on WhatsApp
-</a>
+<a href="https://wa.me/2347031183005" target="_blank" class="btn">Chat Pastor</a>
 </section>
 
 <!-- CHURCH -->
 <section>
 <h2>About the Church</h2>
-<p style="max-width:800px;margin:auto;text-align:center;">
-THE ARK OF GOD COVENANT FAITH BIBLE MINISTRY is a divine apostolic commission raised by God to bring men into covenant alignment and supernatural encounters. This is a place of power, revival, and transformation where destinies are shaped and lives are changed forever.
+<p style="text-align:center;">
+This is not just a church — it is a movement of power, revival, and destiny transformation. A place where lives are changed, prayers are answered, and God's presence is real.
 </p>
 </section>
 
-<!-- DAILY -->
+<!-- DAILY BIBLE -->
 <section>
 <h2>Daily Bible Reading</h2>
 <p id="bible"></p>
 </section>
 
+<!-- ONE YEAR BIBLE -->
+<section>
+<h2>One Year Bible Reading Plan</h2>
+<p id="oneyear"></p>
+</section>
+
+<!-- DEVOTIONAL -->
 <section>
 <h2>Daily Devotional</h2>
 <p id="devotional"></p>
@@ -118,47 +122,47 @@ THE ARK OF GOD COVENANT FAITH BIBLE MINISTRY is a divine apostolic commission ra
 
 <script>
 const bible = [
-"Psalm 23 - The Lord is my shepherd; I shall not want.",
-"Isaiah 41:10 - Fear not, for I am with you.",
-"John 3:16 - For God so loved the world.",
-"Romans 8:28 - All things work together for good.",
-"Proverbs 3:5 - Trust in the Lord with all your heart."
+"Psalm 23",
+"John 3",
+"Romans 8",
+"Proverbs 3",
+"Isaiah 41"
+];
+
+const oneyear = [
+"Genesis 1-3",
+"Matthew 1-2",
+"Exodus 1-3",
+"Mark 1",
+"Psalms 1-5"
 ];
 
 const devotional = [
-"Today, walk in faith and refuse fear.",
-"God is opening doors for you today.",
-"Stay in prayer and expect miracles.",
-"Your testimony is next in line.",
-"Grace is speaking for you today."
+"Today is your day of divine encounter. Walk in faith and expect miracles.",
+"God is aligning everything for your good today. Stay focused and prayerful.",
+"You are stepping into a new dimension of grace and favor.",
+"Every obstacle before you is turning into a testimony.",
+"The hand of God is upon your life for greatness."
 ];
 
 let day = new Date().getDate();
 
 document.getElementById("bible").innerText = bible[day % bible.length];
+document.getElementById("oneyear").innerText = oneyear[day % oneyear.length];
 document.getElementById("devotional").innerText = devotional[day % devotional.length];
 </script>
 
 <!-- YOUTUBE -->
 <section>
 <h2>Watch Our Messages</h2>
-
 <iframe width="100%" height="315"
 src="https://www.youtube.com/embed?listType=user_uploads&list=abioyearemuelijah"
-frameborder="0" allowfullscreen>
-</iframe>
-
-<br><br>
-
-<a href="https://www.youtube.com/@abioyearemuelijah" target="_blank">
-Visit Our YouTube Channel
-</a>
+frameborder="0" allowfullscreen></iframe>
 </section>
 
 <!-- GALLERY -->
 <section>
 <h2>Photo Gallery</h2>
-
 <div class="gallery">
 <img src="image1.jpg">
 <img src="image2.jpg">
@@ -170,18 +174,70 @@ Visit Our YouTube Channel
 <img src="image8.jpg">
 <img src="image9.jpg">
 </div>
-
 </section>
 
-<!-- SOCIAL -->
+<!-- PARTNERS -->
 <section>
-<h2>Follow Us</h2>
+<h2>Become a Partner</h2>
 <p style="text-align:center;">
-<a href="https://www.youtube.com/@abioyearemuelijah" target="_blank">YouTube</a>
+Join hands with this divine commission and become a partner in spreading the gospel, transforming lives, and advancing God's kingdom globally.
 </p>
+
+<div style="text-align:center;">
+<p>• Kingdom Builders</p>
+<p>• Mission Partners</p>
+<p>• Media Partners</p>
+<p>• Covenant Seed Partners</p>
+
+<a href="https://form.jotform.com/260764899419072" target="_blank" class="btn">
+Become a Partner
+</a>
+</div>
 </section>
 
-<!-- WHATSAPP FLOAT -->
+<!-- SCHOOL -->
+<section>
+<h2>Ark of God Discipleship School & College of Mission</h2>
+<p style="text-align:center;">
+This is a divine training ground where men are raised into spiritual maturity, leadership, and kingdom assignment. Here, you will be equipped, empowered, and released into your divine purpose.
+</p>
+
+<div style="text-align:center;">
+<a href="https://form.jotform.com/260765150580052" target="_blank" class="btn">
+Apply Now
+</a>
+</div>
+</section>
+
+<!-- PRAYER -->
+<section>
+<h2>Prayer Request</h2>
+<p style="text-align:center;">
+No matter what you are going through, God is ready to intervene. Submit your prayer request and experience divine turnaround.
+</p>
+
+<div style="text-align:center;">
+<a href="https://form.jotform.com/260765431230046" target="_blank" class="btn">
+Send Prayer Request
+</a>
+</div>
+</section>
+
+<!-- TESTIMONY -->
+<section>
+<h2>Share Your Testimony</h2>
+<p style="text-align:center;">
+Your testimony is a proof of God's power. Share what God has done and inspire others to believe.
+</p>
+
+<div style="text-align:center;">
+<a href="https://form.jotform.com/260765476992070" target="_blank" class="btn">
+Share Testimony
+</a>
+</div>
+</section>
+
+<!-- FLOAT WHATSAPP -->
 <a href="https://wa.me/2347031183005" target="_blank"
 style="position:fixed;bottom:20px;right:20px;background:green;color:white;padding:15px;border-radius:50px;">
 WhatsApp
