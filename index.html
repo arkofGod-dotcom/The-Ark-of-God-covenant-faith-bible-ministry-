@@ -121,31 +121,38 @@ This is not just a church — it is a movement of power, revival, and destiny tr
 </section>
 
 <script>
+function getDayNumber() {
+  const start = new Date(2026, 0, 1);
+  const today = new Date();
+  const diff = today - start;
+  return Math.floor(diff / (1000 * 60 * 60 * 24));
+}
+
+const day = getDayNumber();
+
 const bible = [
-"Psalm 23",
-"John 3",
-"Romans 8",
-"Proverbs 3",
-"Isaiah 41"
+"Psalm 23 - The Lord is my shepherd; I shall not want.",
+"John 3:16 - For God so loved the world.",
+"Romans 8 - Life in the Spirit.",
+"Proverbs 3 - Trust in the Lord.",
+"Isaiah 41:10 - Fear not, for I am with you."
 ];
 
 const oneyear = [
 "Genesis 1-3",
+"Genesis 4-6",
 "Matthew 1-2",
 "Exodus 1-3",
-"Mark 1",
 "Psalms 1-5"
 ];
 
 const devotional = [
 "Today is your day of divine encounter. Walk in faith and expect miracles.",
-"God is aligning everything for your good today. Stay focused and prayerful.",
-"You are stepping into a new dimension of grace and favor.",
-"Every obstacle before you is turning into a testimony.",
+"God is aligning everything for your good today.",
+"You are stepping into a new dimension of grace.",
+"Every obstacle is turning into a testimony.",
 "The hand of God is upon your life for greatness."
 ];
-
-let day = new Date().getDate();
 
 document.getElementById("bible").innerText = bible[day % bible.length];
 document.getElementById("oneyear").innerText = oneyear[day % oneyear.length];
