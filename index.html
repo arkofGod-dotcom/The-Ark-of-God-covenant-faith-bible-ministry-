@@ -3,25 +3,36 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>THE ARK OF GOD COVENANT FAITH BIBLE MINISTRY</title>
+<title>ARK OF GOD COVENANT FAITH BIBLE MINISTRY</title>
 
 <style>
-body {
+body{
 margin:0;
-font-family: Arial;
-background: linear-gradient(135deg,#0b1f3a,#d4af37);
+font-family:Arial;
+background:#0b1f3a;
 color:white;
 }
 
-/* HEADER */
-header {
+/* HERO */
+.hero{
+background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url('img1.jpg');
+background-size:cover;
+background-position:center;
+padding:100px 20px;
 text-align:center;
-padding:30px;
-background:#0b1f3a;
+}
+
+.hero h1{
+font-size:30px;
+}
+
+.hero p{
+font-size:18px;
+margin-top:10px;
 }
 
 /* SECTION */
-section {
+section{
 background:white;
 color:black;
 margin:20px;
@@ -30,24 +41,34 @@ border-radius:15px;
 }
 
 /* BUTTON */
-.btn {
-display:inline-block;
+.btn{
 background:#d4af37;
 color:black;
 padding:10px 20px;
 border-radius:5px;
 text-decoration:none;
+display:inline-block;
 margin-top:10px;
 }
 
-/* GALLERY */
-.gallery {
+/* FLEX */
+.flex{
 display:flex;
 flex-wrap:wrap;
+gap:20px;
 justify-content:center;
 }
 
-.gallery img {
+/* CARD */
+.card{
+background:#f4f4f4;
+padding:15px;
+border-radius:10px;
+width:300px;
+}
+
+/* GALLERY */
+.gallery img{
 width:100%;
 max-width:250px;
 margin:10px;
@@ -56,7 +77,7 @@ cursor:pointer;
 }
 
 /* MODAL */
-#modal {
+#modal{
 display:none;
 position:fixed;
 top:0;
@@ -68,12 +89,25 @@ justify-content:center;
 align-items:center;
 }
 
-#modal img {
+#modal img{
 max-width:90%;
 }
 
+/* NAV */
+nav{
+background:#000;
+padding:10px;
+text-align:center;
+}
+
+nav a{
+color:white;
+margin:10px;
+text-decoration:none;
+}
+
 /* WHATSAPP */
-.whatsapp {
+.whatsapp{
 position:fixed;
 bottom:20px;
 right:20px;
@@ -82,43 +116,48 @@ color:white;
 padding:15px;
 border-radius:50%;
 text-decoration:none;
-font-weight:bold;
 }
-</style>
 
+</style>
 </head>
 
 <body>
 
-<!-- HEADER -->
-<header>
+<!-- NAV -->
+<nav>
+<a href="#">Home</a>
+<a href="#">About</a>
+<a href="#">Services</a>
+<a href="#">Gallery</a>
+<a href="#">Contact</a>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
 <h1>THE ARK OF GOD COVENANT FAITH BIBLE MINISTRY</h1>
 <p>Raising a Generation of Power, Glory and Dominion</p>
-</header>
+</div>
 
 <!-- TRANSLATOR -->
-<div id="google_translate_element" style="text-align:center; margin:10px;"></div>
+<div id="google_translate_element" style="text-align:center;"></div>
 
 <!-- ABOUT -->
 <section>
 <h2>About Us</h2>
 <p>This is a divine commission raising men into power, glory and kingdom dominion. A place of transformation, revival and supernatural encounters.</p>
-
-<p><b>Annual Convention:</b> Every March</p>
-
-<h3>Special Events</h3>
-<p>24hrs Marathon Prayer – First Friday & Saturday of May</p>
-<p>Echo of Joy – Every 7th May</p>
-<p>Divine Encounter – Last 5 days of October</p>
 </section>
 
 <!-- PASTOR -->
 <section>
 <h2>Meet the Pastor</h2>
+<div class="flex">
 <img src="pastor.jpg" width="250">
-<p><b>Pastor Dr E.A Abioye</b> is a prophetic vessel, teacher of truth and a carrier of divine fire raising kingdom giants.</p>
-
+<div>
+<h3>Pastor Dr E.A Abioye</h3>
+<p>A prophetic voice raising kingdom giants.</p>
 <a href="https://wa.me/2347031183005" class="btn">Chat on WhatsApp</a>
+</div>
+</div>
 </section>
 
 <!-- LIVE -->
@@ -132,35 +171,43 @@ frameborder="0" allowfullscreen></iframe>
 <!-- SERVICES -->
 <section>
 <h2>Church Services</h2>
-<p>Sunday: Prophetic Breakthrough – 9am</p>
-<p>Last Sunday: Anointing Service – 4pm</p>
-<p>Wednesday: Operation Lazarus – 12pm</p>
+<div class="flex">
+<div class="card">Sunday: 9am</div>
+<div class="card">Anointing: Last Sunday 4pm</div>
+<div class="card">Wednesday: 12pm</div>
+</div>
+</section>
+
+<!-- EVENTS -->
+<section>
+<h2>Programs</h2>
+<div class="flex">
+<div class="card">Annual Convention – March</div>
+<div class="card">Marathon Prayer – May</div>
+<div class="card">Echo of Joy – May 7</div>
+<div class="card">Divine Encounter – October</div>
+</div>
 </section>
 
 <!-- DEVOTIONAL -->
 <section>
 <h2>Daily Devotional</h2>
-<p>Update this daily from your GitHub (I can automate later for you).</p>
-
-<h2>One Year Bible Reading</h2>
-<p>Also update daily or I can set full 365 plan for you.</p>
+<p>Update daily (we can automate next).</p>
 </section>
 
 <!-- LINKS -->
 <section>
 <h2>Ministry Links</h2>
-
-<p><a href="https://form.jotform.com/260765150580052">School of Discipleship</a></p>
-<p><a href="https://form.jotform.com/260764899419072">Partners Form</a></p>
-<p><a href="https://form.jotform.com/260765476992070">Share Testimony</a></p>
-<p><a href="https://form.jotform.com/260765431230046">Prayer Request</a></p>
-
+<p><a href="https://form.jotform.com/260765150580052">Discipleship</a></p>
+<p><a href="https://form.jotform.com/260764899419072">Partners</a></p>
+<p><a href="https://form.jotform.com/260765476992070">Testimony</a></p>
+<p><a href="https://form.jotform.com/260765431230046">Prayer</a></p>
 </section>
 
 <!-- GALLERY -->
 <section>
 <h2>Gallery</h2>
-<div class="gallery">
+<div class="flex">
 <img src="img1.jpg" onclick="openImg(this.src)">
 <img src="img2.jpg" onclick="openImg(this.src)">
 <img src="img3.jpg" onclick="openImg(this.src)">
@@ -181,31 +228,27 @@ frameborder="0" allowfullscreen></iframe>
 <!-- CONTACT -->
 <section>
 <h2>Contact</h2>
-
 <form action="https://formsubmit.co/thearkofgodcfbm@gmail.com" method="POST">
 <input type="text" name="name" placeholder="Name" required><br><br>
 <input type="email" name="email" placeholder="Email" required><br><br>
-<textarea name="message" placeholder="Message"></textarea><br><br>
-
+<textarea name="message"></textarea><br><br>
 <input type="hidden" name="_captcha" value="false">
-
-<button class="btn">Send Message</button>
+<button class="btn">Send</button>
 </form>
 
-<p><b>Phone:</b> 07031183005</p>
-<p><b>Email:</b> thearkofgodcfbm@gmail.com</p>
-
+<p>Phone: 07031183005</p>
+<p>Email: thearkofgodcfbm@gmail.com</p>
 </section>
 
 <!-- GIVING -->
 <section>
-<h2>Church Account</h2>
+<h2>Giving</h2>
 <p>Access Bank</p>
-<p>Account Number: 0107029943</p>
-<p>Name: The Ark of God Covenant Faith Bible Ministry</p>
+<p>0107029943</p>
+<p>The Ark of God Covenant Faith Bible Ministry</p>
 </section>
 
-<!-- WHATSAPP FLOAT -->
+<!-- WHATSAPP -->
 <a href="https://wa.me/2347031183005" class="whatsapp">Chat</a>
 
 <script>
@@ -215,13 +258,13 @@ document.getElementById("modalImg").src=src;
 }
 </script>
 
-<!-- TRANSLATOR SCRIPT -->
+<!-- TRANSLATOR -->
 <script>
-function googleTranslateElementInit() {
+function googleTranslateElementInit(){
 new google.translate.TranslateElement({
-pageLanguage: 'en',
-includedLanguages: 'en,yo,ig,ha,fr,pt'
-}, 'google_translate_element');
+pageLanguage:'en',
+includedLanguages:'en,yo,ig,ha,fr,pt'
+},'google_translate_element');
 }
 </script>
 <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
