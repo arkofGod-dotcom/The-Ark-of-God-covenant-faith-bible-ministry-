@@ -13,183 +13,157 @@ body {
     color: #000;
 }
 
+/* HEADER */
 header {
     background: #1a237e;
     color: white;
-    text-align: center;
-    padding: 30px;
-}
-
-section {
-    background: rgba(255,255,255,0.95);
-    margin: 20px;
     padding: 25px;
-    border-radius: 12px;
     text-align: center;
 }
 
-h2 {
-    color: #0d47a1;
-}
-
-img {
-    border-radius: 10px;
-}
-
-.btn {
-    display: inline-block;
-    padding: 12px 25px;
-    background: green;
-    color: white;
-    text-decoration: none;
-    border-radius: 6px;
-    margin-top: 10px;
-}
-
-.gallery {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-}
-
-.gallery img {
-    width: 300px;
-}
-
-form input, form textarea {
-    width: 90%;
-    padding: 10px;
+/* TRANSLATOR */
+#google_translate_element {
+    text-align: center;
     margin: 10px;
 }
 
-footer {
-    background: #111;
-    color: white;
+/* SECTIONS */
+section {
+    background: #ffffff;
+    margin: 20px;
+    padding: 25px;
+    border-radius: 12px;
+}
+
+/* TITLES */
+h2 {
+    color: #1a237e;
     text-align: center;
-    padding: 20px;
+}
+
+/* BUTTON */
+.btn {
+    display: inline-block;
+    background: green;
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 6px;
+}
+
+/* GALLERY */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.gallery img {
+    width: 250px;
+    border-radius: 10px;
 }
 </style>
+
 </head>
 
 <body>
 
-<!-- TRANSLATOR -->
-<div id="google_translate_element" style="text-align:center; padding:10px;"></div>
-
-<script>
-function googleTranslateElementInit() {
-  new google.translate.TranslateElement({
-    pageLanguage: 'en',
-    includedLanguages: 'en,yo,ig,ha,fr,pt'
-  }, 'google_translate_element');
-}
-</script>
-<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-
 <header>
-<h1>THE ARK OF GOD COVENANT FAITH BIBLE MINISTRY</h1>
-<p>Raising a Generation of Power, Glory and Dominion</p>
+    <h1>THE ARK OF GOD COVENANT FAITH BIBLE MINISTRY</h1>
 </header>
 
-<section>
-<h2>Meet the Pastor</h2>
-<img src="pastor.jpg" width="220">
-<p>
-Pastor Dr. E.A Abioye is a prophetic voice raised for this generation,
-carrying divine authority, revelation, and power.
-</p>
-<a href="https://wa.me/2347031183005" class="btn">Chat Pastor</a>
-</section>
+<!-- TRANSLATOR -->
+<div id="google_translate_element"></div>
 
+<!-- ABOUT -->
 <section>
 <h2>About the Church</h2>
-<p>
-This is not just a church but a movement of power, revival, and destiny transformation.
-</p>
+<p>This is not just a church but a movement of power, revival, and destiny transformation.</p>
 </section>
 
+<!-- DAILY BIBLE -->
 <section>
 <h2>Daily Bible Reading</h2>
-<p id="bible"></p>
+<p id="bible">Loading...</p>
 </section>
 
+<!-- ONE YEAR -->
 <section>
 <h2>One Year Bible Reading Plan</h2>
-<p id="oneyear"></p>
+<p id="plan">Loading...</p>
 </section>
 
+<!-- DEVOTIONAL -->
 <section>
 <h2>Daily Devotional</h2>
-<p id="devotional"></p>
+<p id="devotional">Loading...</p>
 </section>
 
+<!-- GALLERY -->
 <section>
 <h2>Photo Gallery</h2>
 <div class="gallery">
-<img src="1.jpg">
-<img src="2.jpg">
-<img src="3.jpg">
-<img src="4.jpg">
-<img src="5.jpg">
-<img src="6.jpg">
-<img src="7.jpg">
-<img src="8.jpg">
-<img src="9.jpg">
+<img src="YOUR_IMAGE_1.jpg">
+<img src="YOUR_IMAGE_2.jpg">
+<img src="YOUR_IMAGE_3.jpg">
+<img src="YOUR_IMAGE_4.jpg">
+<img src="YOUR_IMAGE_5.jpg">
 </div>
 </section>
 
+<!-- CONTACT -->
 <section>
 <h2>Contact Us</h2>
-
 <form action="https://formsubmit.co/YOUR-EMAIL@gmail.com" method="POST">
-<input type="text" name="name" placeholder="Your Name" required><br>
-<input type="email" name="email" placeholder="Your Email" required><br>
-<textarea name="message" placeholder="Your Message" required></textarea><br>
-
-<input type="hidden" name="_captcha" value="false">
-<input type="hidden" name="_next" value="https://thankyou.page">
-
+<input type="text" name="name" placeholder="Your Name" required><br><br>
+<input type="email" name="email" placeholder="Your Email" required><br><br>
+<textarea name="message" placeholder="Your Message" required></textarea><br><br>
 <button type="submit" class="btn">Send Message</button>
 </form>
-
 </section>
 
-<footer>
-<p>© 2026 THE ARK OF GOD COVENANT FAITH BIBLE MINISTRY</p>
-</footer>
-
 <script>
-const today = new Date().getDate();
-
+// DAILY CONTENT ROTATION
 const bible = [
-"Psalm 23 - The Lord is my shepherd.",
-"John 3:16 - For God so loved the world.",
-"Romans 8 - Life in the Spirit.",
-"Proverbs 3 - Trust in the Lord.",
-"Isaiah 41:10 - Fear not, for I am with you."
+"Isaiah 41:10 - Fear not, for I am with you.",
+"Romans 8 - Life in the Spirit",
+"Psalm 23 - The Lord is my shepherd"
 ];
 
-const oneyear = [
+const plan = [
 "Genesis 1-3",
-"Genesis 4-6",
 "Matthew 1-2",
-"Exodus 1-3",
 "Psalms 1-5"
 ];
 
 const devotional = [
+"Favour will locate you.",
 "You are stepping into a new dimension of grace.",
-"God is opening doors for you today.",
-"Your miracle is nearer than you think.",
-"Grace will speak for you today.",
-"Favour will locate you."
+"Your breakthrough is here."
 ];
 
-document.getElementById("bible").innerText = bible[today % bible.length];
-document.getElementById("oneyear").innerText = oneyear[today % oneyear.length];
-document.getElementById("devotional").innerText = devotional[today % devotional.length];
+let i = 0;
+
+setInterval(() => {
+document.getElementById("bible").innerText = bible[i % bible.length];
+document.getElementById("plan").innerText = plan[i % plan.length];
+document.getElementById("devotional").innerText = devotional[i % devotional.length];
+i++;
+}, 3000);
 </script>
 
+<!-- GOOGLE TRANSLATOR -->
+<script>
+function googleTranslateElementInit() {
+new google.translate.TranslateElement({
+pageLanguage: 'en',
+includedLanguages: 'en,yo,ig,ha,fr,pt'
+}, 'google_translate_element');
+}
+</script>
+
+<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
 </body>
-</html>
+    </html>
