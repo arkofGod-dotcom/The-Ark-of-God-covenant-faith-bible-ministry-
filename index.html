@@ -7,61 +7,48 @@
 
 <style>
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-    color: #000;
+  margin:0;
+  font-family: Arial;
+  background: linear-gradient(135deg,#0a2a43,#1c6ea4);
+  color:white;
+  text-align:center;
 }
 
-/* HEADER */
 header {
-    background: #1a237e;
-    color: white;
-    padding: 25px;
-    text-align: center;
+  padding:20px;
+  font-size:22px;
+  font-weight:bold;
 }
 
-/* TRANSLATOR */
-#google_translate_element {
-    text-align: center;
-    margin: 10px;
+.section {
+  background:white;
+  color:black;
+  margin:20px;
+  padding:20px;
+  border-radius:15px;
 }
 
-/* SECTIONS */
-section {
-    background: #ffffff;
-    margin: 20px;
-    padding: 25px;
-    border-radius: 12px;
-}
-
-/* TITLES */
-h2 {
-    color: #1a237e;
-    text-align: center;
-}
-
-/* BUTTON */
-.btn {
-    display: inline-block;
-    background: green;
-    color: white;
-    padding: 12px 25px;
-    text-decoration: none;
-    border-radius: 6px;
-}
-
-/* GALLERY */
-.gallery {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    justify-content: center;
+img {
+  width:100%;
+  border-radius:10px;
 }
 
 .gallery img {
-    width: 250px;
-    border-radius: 10px;
+  margin-top:10px;
+}
+
+button {
+  background:green;
+  color:white;
+  padding:10px;
+  border:none;
+  border-radius:5px;
+}
+
+a {
+  display:block;
+  margin:10px;
+  color:blue;
 }
 </style>
 
@@ -70,100 +57,141 @@ h2 {
 <body>
 
 <header>
-    <h1>THE ARK OF GOD COVENANT FAITH BIBLE MINISTRY</h1>
+THE ARK OF GOD COVENANT FAITH BIBLE MINISTRY  
+<br>Pastor Dr E.A Abioye
 </header>
 
 <!-- TRANSLATOR -->
 <div id="google_translate_element"></div>
 
-<!-- ABOUT -->
-<section>
-<h2>About the Church</h2>
-<p>This is not just a church but a movement of power, revival, and destiny transformation.</p>
-</section>
-
-<!-- DAILY BIBLE -->
-<section>
-<h2>Daily Bible Reading</h2>
-<p id="bible">Loading...</p>
-</section>
-
-<!-- ONE YEAR -->
-<section>
-<h2>One Year Bible Reading Plan</h2>
-<p id="plan">Loading...</p>
-</section>
-
-<!-- DEVOTIONAL -->
-<section>
-<h2>Daily Devotional</h2>
-<p id="devotional">Loading...</p>
-</section>
-
-<!-- GALLERY -->
-<section>
-<h2>Photo Gallery</h2>
-<div class="gallery">
-<img src="YOUR_IMAGE_1.jpg">
-<img src="YOUR_IMAGE_2.jpg">
-<img src="YOUR_IMAGE_3.jpg">
-<img src="YOUR_IMAGE_4.jpg">
-<img src="YOUR_IMAGE_5.jpg">
-</div>
-</section>
-
-<!-- CONTACT -->
-<section>
-<h2>Contact Us</h2>
-<form action="https://formsubmit.co/YOUR-EMAIL@gmail.com" method="POST">
-<input type="text" name="name" placeholder="Your Name" required><br><br>
-<input type="email" name="email" placeholder="Your Email" required><br><br>
-<textarea name="message" placeholder="Your Message" required></textarea><br><br>
-<button type="submit" class="btn">Send Message</button>
-</form>
-</section>
-
-<script>
-// DAILY CONTENT ROTATION
-const bible = [
-"Isaiah 41:10 - Fear not, for I am with you.",
-"Romans 8 - Life in the Spirit",
-"Psalm 23 - The Lord is my shepherd"
-];
-
-const plan = [
-"Genesis 1-3",
-"Matthew 1-2",
-"Psalms 1-5"
-];
-
-const devotional = [
-"Favour will locate you.",
-"You are stepping into a new dimension of grace.",
-"Your breakthrough is here."
-];
-
-let i = 0;
-
-setInterval(() => {
-document.getElementById("bible").innerText = bible[i % bible.length];
-document.getElementById("plan").innerText = plan[i % plan.length];
-document.getElementById("devotional").innerText = devotional[i % devotional.length];
-i++;
-}, 3000);
-</script>
-
-<!-- GOOGLE TRANSLATOR -->
 <script>
 function googleTranslateElementInit() {
-new google.translate.TranslateElement({
-pageLanguage: 'en',
-includedLanguages: 'en,yo,ig,ha,fr,pt'
-}, 'google_translate_element');
+  new google.translate.TranslateElement(
+  {pageLanguage: 'en'},
+  'google_translate_element');
 }
 </script>
 
 <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
+<!-- PASTOR IMAGE -->
+<div class="section">
+<img src="img1.jpg">
+</div>
+
+<!-- ABOUT -->
+<div class="section">
+<h2>About Us</h2>
+<p>Welcome to The Ark of God Covenant Faith Bible Ministry.</p>
+
+<p>Our Annual Convention comes up every March.</p>
+
+<h3>Special Events</h3>
+<p>24hrs Marathon Prayer - First Friday & Saturday of May</p>
+<p>Echo of Joy - Every 7th May</p>
+<p>Divine Encounter - Last 5 days of October</p>
+</div>
+
+<!-- SERVICES -->
+<div class="section">
+<h2>Church Services</h2>
+<p>Sunday: Prophetic Breakthrough - 9am</p>
+<p>Last Sunday: Anointing Service - 4pm</p>
+<p>Wednesday: Operation Lazarus - 12pm</p>
+</div>
+
+<!-- DEVOTIONAL AUTO -->
+<div class="section">
+<h2>Daily Devotional</h2>
+<p id="devotional"></p>
+</div>
+
+<!-- BIBLE PLAN AUTO -->
+<div class="section">
+<h2>One Year Bible Reading</h2>
+<p id="bible"></p>
+</div>
+
+<script>
+const devotionals = [
+"Favour will locate you",
+"God will make a way",
+"You will not fail",
+"Victory is yours"
+];
+
+const bible = [
+"Psalms 1-5",
+"Genesis 1-3",
+"Matthew 1-2",
+"Proverbs 1"
+];
+
+let i=0;
+
+setInterval(()=>{
+document.getElementById("devotional").innerText = devotionals[i%devotionals.length];
+document.getElementById("bible").innerText = bible[i%bible.length];
+i++;
+},3000);
+</script>
+
+<!-- LINKS -->
+<div class="section">
+<h2>Quick Links</h2>
+
+<a href="https://form.jotform.com/260765150580052">Discipleship School</a>
+
+<a href="https://form.jotform.com/260764899419072">Partnership</a>
+
+<a href="https://form.jotform.com/260765476992070">Testimony</a>
+
+<a href="https://form.jotform.com/260765431230046">Prayer Request</a>
+
+</div>
+
+<!-- GALLERY -->
+<div class="section gallery">
+<h2>Photo Gallery</h2>
+
+<img src="img1.jpg">
+<img src="img2.jpg">
+<img src="img3.jpg">
+<img src="img4.jpg">
+<img src="img5.jpg">
+<img src="img6.jpg">
+<img src="img7.jpg">
+<img src="img8.jpg">
+<img src="img9.jpg">
+
+</div>
+
+<!-- CONTACT FORM -->
+<div class="section">
+<h2>Contact Us</h2>
+
+<form action="https://formsubmit.co/thearkofgodcfbm@gmail.com" method="POST">
+<input type="text" name="name" placeholder="Your Name" required><br><br>
+<input type="email" name="email" placeholder="Your Email" required><br><br>
+<textarea name="message" placeholder="Your Message" required></textarea><br><br>
+
+<input type="hidden" name="_captcha" value="false">
+
+<button type="submit">Send Message</button>
+</form>
+
+<p>Phone: 07031183005</p>
+<p>Email: thearkofgodcfbm@gmail.com</p>
+
+</div>
+
+<!-- ACCOUNT -->
+<div class="section">
+<h2>Church Account</h2>
+<p>Access Bank</p>
+<p>Acct No: 0107029943</p>
+<p>Name: The Ark of God Covenant Faith Bible Ministry</p>
+</div>
+
 </body>
-    </html>
+                                                         </html>
